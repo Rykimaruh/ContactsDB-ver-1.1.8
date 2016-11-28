@@ -1,0 +1,6 @@
+{
+  "name": "Contactsdb-ver-1.1.8",
+  "tagline": "An application made to read, write, update, delete database files from Access, SQL or Oracle. ",
+  "body": "Application that can read, write, update, delete tables within Database files. Currently able to do so with Access DB. Soon with SQL and Oracle files. The purpose of this is to make it easier to manage database for common users rather than having painful tasks without messing up the system. \r\n\r\nCurrently in developing the create tables, check connections and make compatibility with other databases. ",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
