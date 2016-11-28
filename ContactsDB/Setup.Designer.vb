@@ -37,6 +37,7 @@ Partial Class Setup
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ExxitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class Setup
         '
         Me.Button1.Location = New System.Drawing.Point(263, 29)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(98, 23)
         Me.Button1.TabIndex = 47
         Me.Button1.Text = "Browse"
         Me.Button1.UseVisualStyleBackColor = True
@@ -96,7 +97,7 @@ Partial Class Setup
         '
         Me.Button4.Location = New System.Drawing.Point(263, 86)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(98, 23)
         Me.Button4.TabIndex = 52
         Me.Button4.Text = "Check"
         Me.Button4.UseVisualStyleBackColor = True
@@ -104,7 +105,7 @@ Partial Class Setup
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 65)
+        Me.Label2.Location = New System.Drawing.Point(12, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 53
@@ -149,14 +150,23 @@ Partial Class Setup
         Me.ComboBox1.Items.AddRange(New Object() {"Microsoft Access", "SQL", "Oracle"})
         Me.ComboBox1.Location = New System.Drawing.Point(263, 57)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(75, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(98, 21)
         Me.ComboBox1.TabIndex = 57
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(108, 110)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(149, 20)
+        Me.TextBox4.TabIndex = 58
+        Me.TextBox4.Visible = False
         '
         'Setup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(373, 167)
+        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
@@ -193,4 +203,5 @@ Partial Class Setup
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ExxitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
 End Class

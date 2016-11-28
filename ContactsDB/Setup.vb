@@ -3,10 +3,13 @@ Public Class Setup
     Dim con As New OleDb.OleDbConnection
     Dim provider, dbsource, dbmydocs, thedatabase, fulldbpath As String
     Dim dbset As New DataSet 'copy of the info from a database
+
     Dim dbadapter As OleDb.OleDbDataAdapter
     Dim inc As Integer
     Dim maxrow As Integer
     Dim strFileName As String
+    Dim extension As String
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -39,9 +42,9 @@ Public Class Setup
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        'If ComboBox1.SelectedItem = "Microsoft Access" Then
-        '    extension = ".mdb"
-        'End If
+        If ComboBox1.SelectedItem = "Microsoft Access" Then
+            extension = ".mdb"
+        End If
         'If ComboBox1.SelectedItem = "SQL" Then
         '    extension = ".sql"
         'End If
@@ -53,9 +56,11 @@ Public Class Setup
             MessageBox.Show("No empty fields allowed!")
             Exit Sub
         Else
+            Dim dbdirectory As String = Trim(TextBox2.Text + extension) 'are you kidding me?! The way to fix thi problem was placing it on the else....OBVIOUSLY since it was invoked right after showing form1 UGH!!! 
+            TextBox4.Text = Trim(TextBox2.Text & extension)
             Form1.Show()
         End If
-
+        
     End Sub
 
    
@@ -64,16 +69,23 @@ Public Class Setup
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If con.State = ConnectionState.Open Then
-            MessageBox.Show("Connected")
-        End If
-
         If con.State = ConnectionState.Closed Then
+
+            MessageBox.Show("Connected")
+        Else
+            con.Close()
             MessageBox.Show("Not Connected")
         End If
+
+
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         CreateTbl.Show()
+    End Sub
+
+    Private Sub Setup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox4.Visible = False
+        Button4.Visible = False 'until i figure out how to correctly check for connection to a database
     End Sub
 End Class

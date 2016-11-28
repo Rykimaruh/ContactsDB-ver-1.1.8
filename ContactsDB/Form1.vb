@@ -4,14 +4,14 @@
     Dim dbset As New DataSet 'copy of the info from a database
     'Dim extension As String = Trim(".mdb")
     Dim tblName As String = Trim(Setup.TextBox3.Text)
-    Dim dbName As String = Trim(Setup.TextBox2.Text)
+    Dim dbName As String = Trim(Setup.TextBox4.Text)
     Dim dbadapter As OleDb.OleDbDataAdapter
     Dim sql As String = "SELECT * FROM " + tblName
     Dim inc As Integer
     Dim maxrow As Integer
     Dim dt As New DataTable
     'commandbuilder builds sql string for you. Necessary to update database
-
+     
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         TextBox1.ReadOnly = True
         TextBox2.ReadOnly = True
